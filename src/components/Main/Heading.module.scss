@@ -1,0 +1,27 @@
+@use '../../stylesheets' as var;
+
+.container {
+  gap: 2.2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  gap: 1rem;
+  display: flex;
+  max-width: 300px;
+  flex-direction: column;
+  font-size: var.$font-36;
+  font-family: var.$gotham-bold;
+}
+
+.heading::after {
+  content: '';
+  width: 84px;
+  height: 10px;
+  background-color: var.$dark-grey;
+}
+
+.text {
+}
