@@ -1,0 +1,19 @@
+@use '../../stylesheets' as var;
+
+.navbar {
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  position: sticky;
+  align-items: center;
+  padding-block: 1.5rem;
+  justify-content: center;
+  background-color: var.$black;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+}
