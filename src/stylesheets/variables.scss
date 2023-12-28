@@ -1,0 +1,48 @@
+@font-face {
+  font-weight: 400;
+  font-family: 'gotham-book';
+  src: url('../assets/fonts/gotham-book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: 'gotham-bold';
+  src: url('../assets/fonts/gotham-bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: 'gotham-light';
+  src: url('../assets/fonts/gotham-light.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 900;
+  font-family: 'gotham-black';
+  src: url('../assets/fonts/gotham-black.woff2') format('woff2');
+}
+
+$font-14: 14px;
+$font-18: 18px;
+$font-20: 20px;
+$font-24: 24px;
+$font-28: 28px;
+$font-32: 32px;
+$font-36: 36px;
+
+$gotham-book: 'gotham-book';
+$gotham-bold: 'gotham-bold';
+$gotham-light: 'gotham-light';
+$gotham-black: 'gotham-black';
+
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
+$red: hsl(356, 91%, 45%);
+$green: hsl(115, 70%, 44%);
+$yellow: hsl(42, 100%, 54%);
+$dark-grey: hsl(0, 0%, 20%);
+$light-grey: hsl(0, 0%, 50%);
+
+$transparent-dark-grey: hsl(0, 0%, 20%, 25%);
+$transparent-light-grey: hsl(0, 0%, 50%, 15%);
+$transparent-very-light-grey: hsl(0, 0%, 50%, 8%);
