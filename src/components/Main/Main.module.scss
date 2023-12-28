@@ -1,0 +1,8 @@
+@use '../../stylesheets' as var;
+
+.main {
+  gap: 2rem;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
