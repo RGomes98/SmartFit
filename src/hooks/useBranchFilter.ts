@@ -16,7 +16,7 @@ export const useBranchFilter = (
 
   const fetchBranchs = async () => {
     try {
-      const response = await fetch('/mock.json');
+      const response = await fetch('/mock.json', { method: 'GET' });
       const { locations }: Response = await response.json();
       return locations.filter((obj): obj is LocationsFilter => typeof obj.schedules !== 'undefined');
     } catch (error) {
