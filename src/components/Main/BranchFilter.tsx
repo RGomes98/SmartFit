@@ -24,12 +24,12 @@ export const BranchFilter = ({
     }));
   };
 
-  const handleFilterCleanup = () => {
+  const handleFilterReset = () => {
     resetBranchFilter();
     setBranchFilterSettings((prev) => ({ ...prev, isClosedBranchFilterActive: false, timeOfDay: null }));
   };
 
-  const handleTimeOfDay = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFilterTimeOfDay = (event: React.ChangeEvent<HTMLInputElement>) => {
     const timeOfDay = event.currentTarget.id as (typeof branchFilterSettings)['timeOfDay'];
     setBranchFilterSettings((prev) => ({ ...prev, timeOfDay: timeOfDay }));
   };
@@ -48,8 +48,8 @@ export const BranchFilter = ({
               id='morning'
               type='checkbox'
               aria-label='morning'
-              onChange={handleTimeOfDay}
               className={styles.checkbox}
+              onChange={handleFilterTimeOfDay}
               checked={branchFilterSettings['timeOfDay'] === 'morning'}
             />
             <span className={styles.timeOfDay}>Manhã</span>
@@ -60,8 +60,8 @@ export const BranchFilter = ({
               id='afternoon'
               type='checkbox'
               aria-label='afternoon'
-              onChange={handleTimeOfDay}
               className={styles.checkbox}
+              onChange={handleFilterTimeOfDay}
               checked={branchFilterSettings['timeOfDay'] === 'afternoon'}
             />
             <span className={styles.timeOfDay}>Tarde</span>
@@ -72,8 +72,8 @@ export const BranchFilter = ({
               id='night'
               type='checkbox'
               aria-label='night'
-              onChange={handleTimeOfDay}
               className={styles.checkbox}
+              onChange={handleFilterTimeOfDay}
               checked={branchFilterSettings['timeOfDay'] === 'night'}
             />
             <span className={styles.timeOfDay}>Noite</span>
@@ -101,7 +101,7 @@ export const BranchFilter = ({
         <button onClick={updateBranchFilter} className={styles.button}>
           ENCONTRAR UNIDADE
         </button>
-        <button onClick={handleFilterCleanup} className={styles.button}>
+        <button onClick={handleFilterReset} className={styles.button}>
           LIMPAR
         </button>
       </div>
