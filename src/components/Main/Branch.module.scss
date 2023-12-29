@@ -44,13 +44,14 @@
   display: flex;
   align-items: center;
   padding-block: 1.5rem;
+  justify-content: space-between;
 }
 
 .scheduleList {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  gap: 1rem 2.5rem;
+  gap: 1.5rem 2.5rem;
 }
 
 .scheduleItem {
