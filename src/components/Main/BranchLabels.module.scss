@@ -1,12 +1,13 @@
 @use '../../stylesheets' as var;
 
 .container {
-  display: flex;
+  gap: 2rem 0;
+  display: grid;
   list-style: none;
-  align-items: center;
   padding: 1.5rem 1rem;
-  justify-content: space-between;
+  justify-content: center;
   background-color: var.$transparent-very-light-grey;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 .labelWrapper {

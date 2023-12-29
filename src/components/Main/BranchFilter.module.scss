@@ -129,6 +129,7 @@
 }
 
 .textBold {
+  color: var.$black;
   font-size: var.$font-18;
   font-family: var.$gotham-black;
 }
@@ -144,6 +145,9 @@
   all: unset;
   width: 35%;
   cursor: pointer;
+  max-width: 325px;
+  min-width: 250px;
+  color: var.$black;
   text-align: center;
   border-radius: 0.2rem;
   padding-block: 0.8rem;
@@ -155,4 +159,22 @@
 .button:first-of-type {
   border: none;
   background-color: var.$yellow;
+}
+
+@media (max-width: 640px) {
+  .extraOptionWrapper {
+    gap: 1rem;
+    align-items: center;
+    flex-direction: column;
+    margin-block-start: 2.5rem;
+  }
+
+  .buttonWrapper {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+    max-width: unset;
+  }
 }
