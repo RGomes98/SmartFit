@@ -47,10 +47,10 @@
 }
 
 .scheduleList {
-  gap: 2rem;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  gap: 1rem 2.5rem;
 }
 
 .scheduleItem {
