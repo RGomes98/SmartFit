@@ -1,0 +1,19 @@
+@use '../../stylesheets' as var;
+
+.container {
+  gap: 1.5rem;
+  display: grid;
+  justify-content: center;
+  grid-auto-rows: minmax(min-content, 480px);
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.empty {
+  text-align: center;
+  padding-block: 6rem;
+  padding-inline: 1rem;
+}
+
+.message {
+  font-size: var.$font-28;
+}

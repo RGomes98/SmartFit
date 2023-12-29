@@ -2,6 +2,7 @@ import type { BranchFilterSettings } from '../../types/types';
 import { useBranchFilter } from '../../hooks/useBranchFilter';
 import { BranchFilter } from './BranchFilter';
 import { BranchLabels } from './BranchLabels';
+import { BranchGrid } from './BranchGrid';
 import { Heading } from './Heading';
 import { useState } from 'react';
 
@@ -29,6 +30,7 @@ export const Main = () => {
         setBranchFilterSettings={setBranchFilterSettings}
       />
       <BranchLabels />
+      <BranchGrid branchs={branchs} />
     </main>
   );
 };

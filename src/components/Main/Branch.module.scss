@@ -1,0 +1,68 @@
+@use '../../stylesheets' as var;
+
+.container {
+  gap: 1rem;
+  display: flex;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  flex-direction: column;
+  box-shadow: var.$subtle-box-shadow;
+  background-color: var.$transparent-very-light-grey;
+}
+
+.branchHeading {
+  gap: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.branchStatus {
+  font-family: var.$gotham-bold;
+  color: var.$green;
+}
+
+.closed {
+  color: var.$red;
+}
+
+.branchTitle {
+  font-size: var.$font-28;
+  font-family: var.$gotham-bold;
+}
+
+.branchLocation {
+  color: var.$light-grey;
+}
+
+.branchDetails {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid var.$transparent-light-grey;
+}
+
+.branchLabels {
+  display: flex;
+  align-items: center;
+  padding-block: 1.5rem;
+}
+
+.scheduleList {
+  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.scheduleItem {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.weekdays {
+  font-family: var.$gotham-bold;
+  font-size: var.$font-24;
+}
+
+.hours {
+}
