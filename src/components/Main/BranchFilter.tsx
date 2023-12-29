@@ -47,6 +47,7 @@ export const BranchFilter = ({
             <input
               id='morning'
               type='checkbox'
+              aria-label='morning'
               onChange={handleTimeOfDay}
               className={styles.checkbox}
               checked={branchFilterSettings['timeOfDay'] === 'morning'}
@@ -58,6 +59,7 @@ export const BranchFilter = ({
             <input
               id='afternoon'
               type='checkbox'
+              aria-label='afternoon'
               onChange={handleTimeOfDay}
               className={styles.checkbox}
               checked={branchFilterSettings['timeOfDay'] === 'afternoon'}
@@ -69,6 +71,7 @@ export const BranchFilter = ({
             <input
               id='night'
               type='checkbox'
+              aria-label='night'
               onChange={handleTimeOfDay}
               className={styles.checkbox}
               checked={branchFilterSettings['timeOfDay'] === 'night'}
@@ -81,6 +84,7 @@ export const BranchFilter = ({
           <div className={styles.closedBranchWrapper}>
             <input
               type='checkbox'
+              aria-label='closed-branch'
               className={styles.closedBranchCheckbox}
               onChange={handleFilterClosedBranch}
               checked={branchFilterSettings['isClosedBranchFilterActive']}
