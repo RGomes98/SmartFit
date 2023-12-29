@@ -1,10 +1,12 @@
+import type { BranchFilterSettings, Location, Response, Schedule } from '../types/types';
 import { isActiveHoursIntersecting } from '../utils/isActiveHoursIntersecting';
-import type { BranchFilterSettings, Response } from '../types/types';
 import { getFilterActiveHours } from '../utils/getFilterActiveHours';
 import { getBranchActiveHours } from '../utils/getBranchActiveHours';
 import { getCurrentWeekDay } from '../utils/getCurrentWeekDay';
 import { useCallback, useEffect, useState } from 'react';
 import type { Dispatch, SetStateAction } from 'react';
+
+type LocationsFilter = Omit<Location, 'schedules'> & { schedules: Schedule[] };
 
 export const useBranchFilter = (
   branchFilterSettings: BranchFilterSettings,
@@ -16,7 +18,7 @@ export const useBranchFilter = (
     try {
       const response = await fetch('/mock.json');
       const { locations }: Response = await response.json();
-      return locations.filter(({ schedules }) => schedules);
+      return locations.filter((obj): obj is LocationsFilter => typeof obj.schedules !== 'undefined');
     } catch (error) {
       console.error(error);
       return [];
@@ -38,7 +40,6 @@ export const useBranchFilter = (
         ? opened === true
         : opened === false || opened === true;
 
-      if (!schedules) return;
       if (!branchFilterSettings['timeOfDay']) return branchStatus;
 
       return schedules.some(({ hour, weekdays }) => {
