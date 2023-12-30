@@ -1,5 +1,5 @@
 import type { BranchFilterSettings, Location, Response, Schedule } from '../types/types';
-import { isActiveHoursIntersecting } from '../utils/isActiveHoursIntersecting';
+import { getActiveHoursIntersection } from '../utils/getActiveHoursIntersection';
 import { getFilterActiveHours } from '../utils/getFilterActiveHours';
 import { getBranchActiveHours } from '../utils/getBranchActiveHours';
 import { getCurrentWeekDay } from '../utils/getCurrentWeekDay';
@@ -36,9 +36,9 @@ export const useBranchFilter = (
     const data = await fetchBranchs();
 
     const branchs = data.filter(({ opened, schedules }) => {
-      const branchStatus = !branchFilterSettings['isClosedBranchFilterActive']
-        ? opened === true
-        : opened === false || opened === true;
+      const branchStatus = branchFilterSettings['isClosedBranchFilterActive']
+        ? opened === true || opened === false
+        : opened === true;
 
       if (!branchFilterSettings['timeOfDay']) return branchStatus;
 
@@ -47,7 +47,7 @@ export const useBranchFilter = (
         const [branchStart, branchEnd] = getBranchActiveHours(hour);
 
         return (
-          isActiveHoursIntersecting([filterStart, filterEnd], [branchStart, branchEnd]) &&
+          getActiveHoursIntersection([filterStart, filterEnd], [branchStart, branchEnd]) &&
           weekdays === getCurrentWeekDay() &&
           branchStatus
         );
