@@ -1,30 +1,59 @@
-# React + TypeScript + Vite
+# Front-end Smart Fit Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository captures my take on the Front-end Smart Fit challenge, a project tailored to assess my technical skills for the Front-end role.
 
-Currently, two official plugins are available:
+## Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Preview](./screenshot.png)
 
-## Expanding the ESLint configuration
+## Test Proposal
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Smart Fit, being deeply intertwined with the fitness industry, underwent significant shifts during the pandemic. This project's focus is on crafting a page for scouting Smart Fit units, whether **closed** or **open**, facilitating consultation and reservations.
 
-- Configure the top-level `parserOptions` property like this:
+In tackling this test, I endeavored to implement the stipulated functionalities while being mindful of the outlined business rules. The overall aim was to adhere to the provided material, ensuring a responsive and visually appealing design.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Functionalities
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **Data Fetching:** Loaded unit data locally using the `GET` method from the locations.json file in the project directory. This local file serves as a mock data source, facilitating rapid development and testing.
+- **Search:** Implemented the ability to search for all units and apply filters.
+- **Unit Display:** Dynamically displayed units while searching, adhering to the provided layout.
+
+### Business Rules
+
+- **Filtering:** Implemented filters for open/closed units and operating hours.
+- **User Feedback:** Incorporated user-friendly messages, such as "No units found" when applicable.
+- **Icon Validation:** Ensured correct icons were displayed based on the unit's status.
+
+### Tech Stack
+
+- **TypeScript:** Leveraged TypeScript for enhanced code quality and maintainability.
+- **Vite:** Utilized Vite for fast and efficient development and building.
+- **React.js:** Employed React.js for building the user interface with its component-based architecture.
+- **SASS:** Styled the components with SASS for maintainable and modular styling.
+
+## How to Run Locally
+
+To explore the project on your machine:
+
+1. Clone this repository.
+2. Navigate to the project directory.
+3. Install dependencies using `npm install`.
+4. Run the application with `npm run dev`.
+
+## Delivery
+
+You can view the working app on [Vercel](https://smartfit-challenge-rgomes98.vercel.app/).
+
+## Evaluation
+
+In my approach to this challenge, I prioritized:
+
+- **Programming Logic:** Demonstrating problem-solving skills.
+- **Code Quality:** Maintaining high standards for clean, readable, and maintainable code.
+- **Delivery Quality:** Ensuring the project is production-ready.
+- **Layout Fidelity:** Staying true to the proposed layout.
+- **Responsive Design:** Prioritizing responsiveness across various devices.
+
+---
+
+_Feel free to explore the live demo and the codebase. I'm eager to hear your feedback!_
