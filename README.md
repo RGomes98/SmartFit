@@ -1,12 +1,12 @@
-# Front-end Smart Fit Challenge
+# Front-end Challenge - Smart Fit
 
-This repository captures my take on the Front-end Smart Fit challenge, a project tailored to assess my technical skills for the Front-end role.
+This repository captures my take on the Front-end challenge provided by Smart Fit, a project tailored to assess my technical skills for the Front-end role.
 
 ## Preview
 
 ![Preview](./screenshot.png)
 
-## Test Proposal
+## Challenge Proposal
 
 Smart Fit, being deeply intertwined with the fitness industry, underwent significant shifts during the pandemic. This project's focus is on crafting a page for scouting Smart Fit units, whether **closed** or **open**, facilitating consultation and reservations.
 
